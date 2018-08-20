@@ -1,0 +1,34 @@
+﻿import math
+def max_heapify(A,currentNode):
+    left=2*currentNode+1
+    right=2*currentNode+2
+    largest=currentNode
+    if(left<=len(A)-1 and A[left]>A[currentNode]):
+        largest=left
+    if(right<=len(A)-1 and A[right] > A[largest]):
+        largest=right
+    if(largest!=currentNode):
+        temp=A[currentNode]
+        A[currentNode]=A[largest]
+        A[largest]=temp
+        max_heapify(A, largest)
+def Build_max_heapify(A):
+    for i in range(math.floor((len(A))/2),-1,-1):
+        max_heapify(A,i)
+def heap_extract_max(A):
+    if len(A)<0:
+        Error="Heap Underflow"
+    max=A[0]
+    A[0]=A[len(A)-1]
+    max_heapify(A,0)
+    return max
+def heap_increase_key(A,i,key):
+    if(key<A[i]):
+        print("Error")
+    A[i]=key
+    while(i>0 and A[math.floor(i/2)] < A[i]):
+        temp=A[i]
+        A[i]=A[math.floor(i/2)]
+        A[math.floor(i/2)]=temp
+        i=math.floor(i/2)
+

@@ -25,7 +25,7 @@ def quickSort(A, p, r):
 
 
 
-A=[10, 7, 8, 9, 1, 5]
+A=[20, 28, 25, 19, 11, 15]
 partition(A,0,5)
 quickSort(A,0,5)
 n = len(A)

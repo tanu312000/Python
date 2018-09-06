@@ -1,3 +1,4 @@
+#Factorial using while loop
 n=int(input("Enter Factorial Number"))
 i=1
 s=1

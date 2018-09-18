@@ -14,21 +14,5 @@ def detect_loop(head):
             return 1
     return 0
 
-head = Node(1)
-nodeB = Node(2)
-nodeC = Node(3)
-nodeD = Node(4)
-nodeE = Node(5)
-nodeF = Node(6)
 
-
-head.next = nodeB
-nodeB.next = nodeC
-nodeC.next = nodeD
-nodeD.next = nodeE
-nodeE.next = nodeF
-nodeF.next = nodeD
-
-data=detect_loop(head)
-print(data)
 

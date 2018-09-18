@@ -64,23 +64,3 @@ def reverse_klinkedlist(head,k):
 
 
 
-head = Node(1)
-nodeB = Node(2)
-nodeC = Node(3)
-nodeD = Node(4)
-nodeE = Node(5)
-nodeF = Node(6)
-
-
-head.next = nodeB
-nodeB.next = nodeC
-nodeC.next = nodeD
-nodeD.next = nodeE
-nodeE.next = nodeF
-#nodeF.next = nodeC
-
-data=reverse_klinkedlist(head,2)
-traverse(data)
-
-
-

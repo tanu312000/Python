@@ -1,14 +1,17 @@
 #Given a number. Find if it's a strong number or not. 
 #Strong number: A number whose factorial of individual digits is equal to the number itself.
-#Example: 145 => 1! + 4! + 5! = 145
+#Example: 145 => 1! + 4! + 5! = 145 
+          999
+          35
+          3333
 
-def strong_num(num):
+def is_strong_num(num):
     sum=0
     while (num > 0):
         r = num % 10
         sum = sum + fact(r)
         num = num // 10
-    return sum
+    return sum == num
 
 
 def fact(n):
@@ -18,8 +21,8 @@ def fact(n):
     return factorial
 
 num=int(input("Enter the number: "))
-s=strong_num(num)
-if s==int(num):
+s=is_strong_num(num)
+if s:
     print("Strong Number")
 else:
     print("Not a Strong Number")
